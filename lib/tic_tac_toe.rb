@@ -57,3 +57,7 @@ def turn_count(board)
   end
   return taken_positions.length
 end
+
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+turn_count(board)

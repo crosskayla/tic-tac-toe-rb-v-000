@@ -66,6 +66,50 @@ def current_player(board)
   end
 end
 
+def won?(board)
+  exes = []
+  ohs = []
+  board.each_with_index do |space, index|
+    if space == "X"
+      exes << index
+    end
+    if space == "O"
+      ohs << index
+    end
+  end
+  ex_win = WIN_COMBINATIONS.select do |win_combination|
+    (win_combination - exes).empty?
+  end
+  oh_win = WIN_COMBINATIONS.select do |win_combination|
+    (win_combination - ohs).empty?
+  end
+  if !ex_win.empty?
+    return ex_win[0]
+  elsif !oh_win.empty?
+    return oh_win[0]
+  else
+    return false
+  end
+end
+
+def full?(board)
+  board.all?{|space| space == "X" || space == "O"}
+end
+
+def draw?(board)
+  full?(board) && !won?(board)
+end
+
+def over?(board)
+  draw?(board) || full?(board) || won?(board)
+end
+
+def winner(board)
+  if won?(board)
+    return board[won?(board)[0]]
+  end
+
+
 board = ["X", "X", "X", " ", " ", " ", " ", " ", " "]
 
 puts turn_count(board)

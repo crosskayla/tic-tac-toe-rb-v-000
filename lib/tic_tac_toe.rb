@@ -52,8 +52,8 @@ def turn(board)
 end
 
 def turn_count(board)
-  taken_positions = board.select do |index|
-    position_taken?(board, index)
+  taken_positions = board.select do |position|
+    position == "X" || position == "O"
   end
   return taken_positions.length
 end

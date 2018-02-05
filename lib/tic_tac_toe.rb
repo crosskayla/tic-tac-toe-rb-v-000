@@ -39,6 +39,7 @@ def valid_move?(board, index)
 end
 
 def turn(board)
+  token = current_player(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
@@ -47,7 +48,7 @@ def turn(board)
     input = gets.strip
     index = input_to_index(input)
   else
-    move(board, index, current_player(board))
+    move(board, index, token)
   end
 end
 

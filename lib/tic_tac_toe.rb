@@ -50,3 +50,10 @@ def turn(board)
     move(board, index)
   end
 end
+
+def turn_count(board)
+  taken_positions = board.select do |index|
+    position_taken?(board, index)
+  end
+  return taken_positions.length
+end

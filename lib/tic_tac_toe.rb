@@ -116,3 +116,5 @@ def play
     turn(board)
   end
 end
+
+play

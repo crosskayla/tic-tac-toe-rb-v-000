@@ -60,4 +60,4 @@ end
 
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-turn_count(board)
+puts turn_count(board)

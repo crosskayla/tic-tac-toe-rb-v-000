@@ -110,6 +110,6 @@ def winner(board)
   end
 end
 
-board = ["X", "X", "X", " ", " ", " ", " ", " ", " "]
-
-puts won?(board)
+def play
+  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  until over?(board)

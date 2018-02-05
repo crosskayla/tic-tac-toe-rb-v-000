@@ -53,7 +53,7 @@ end
 
 def turn_count(board)
   taken_positions = board.select do |position|
-    !(board[index].nil? || board[index] == " ")
+    !(position.nil? || position == " ")
   end
   return taken_positions.length
 end

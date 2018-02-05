@@ -122,5 +122,3 @@ def play(board)
     puts "It's a draw! You'll have to play again..."
   end
 end
-
-play

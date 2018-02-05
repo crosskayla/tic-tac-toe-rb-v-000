@@ -33,7 +33,7 @@ end
 def valid_move?(board, index)
   if position_taken?(board, index)
     return false
-  elsif move >= 0 && move <= (board.length-1)
+  elsif index >= 0 && index <= (board.length-1)
     return true
   end
 end

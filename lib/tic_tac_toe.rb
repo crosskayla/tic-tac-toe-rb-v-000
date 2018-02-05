@@ -117,6 +117,10 @@ def play
   until over?(board)
     turn(board)
   end
+  if won?(board)
+    puts "Congratulations, #{winner(board)}! You won!"
+  elsif draw?(board)
+    puts "It's a draw! You'll have to play again..."
 end
 
 play
